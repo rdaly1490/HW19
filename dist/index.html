@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HW18 Review</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+	<main>
+		<nav>
+			<a href="#home"><button type="submit" id="home-btn">Home</button></a>
+			<a href="#watching"><button type="submit" id="watch-list">Watch List</button></a>
+			<section id="searchbar">
+				<form id="search-form">
+					<label>Find Movie
+						<input type="text" placeholder="Enter movie title here..." id="query">
+						<a href="search"><button type="submit" id="search-btn"><a href="#search">Search...</button></a>
+					</label>
+				</form>
+			</section>
+		</nav>
+
+
+		<section class="page" id="home">
+		<h2> Hi, and welcome to the movie search web app</h2>	
+		<h4>Here you can:</h4>
+		<ul>
+			<li>Search movies that are listed on IMDB</li>
+			<li>Store those movies in a watch list!</li>
+			<li>Impress your friends with your shiny list of movies</li>
+			<li>Make your friends watch the movies!</li>
+		</ul>
+		</section>
+
+		<section class="page" id="search">
+			<h3 id="w-header">Search Results</h3>
+			<h3 id="r-header">Watch List</h3>
+			<div id="watch"></div>
+			<div id="results"></div>
+		</section>
+
+		<section class="page" id="watching">
+			<h3>My Watch List</h3>
+			<div id="my-watch-list">
+			</div>
+
+		</section>
+		
+	</main>
+
+	<script type="text/template" id="movie-row">
+		<div class = "movie-row">
+			<div><%= Title %><%= " : " %><%= Year %></div>
+		</div>
+	</script>
+
+
+
+
+<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="bower_components/backbone/backbone-min.js"></script>
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
