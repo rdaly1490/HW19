@@ -20,7 +20,7 @@ $(document).ready(function() {
             $(".page").hide();
             $("#search").show();
         	$.get (
-        		"http:www.omdbapi.com",
+        		"http://www.omdbapi.com/?",
         		{
         			s: query
         		},
@@ -34,8 +34,8 @@ $(document).ready(function() {
         			$("#results").append(buildResultRow(movies.Search[i]));
         		}
                 $(".movie-row").on("click", function(e) {
-                    var $clicked = $(e.target);
-                    watchArray.push($clicked);
+                    var $clicked = ($(e.target)).clone();
+                    watchArray.push($clicked);  
                     console.log(watchArray);
                     $("#watch").append($clicked);
                  });
